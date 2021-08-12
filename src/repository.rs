@@ -21,7 +21,7 @@ impl Repository for MemoryRepository {
         self.users
             .iter()
             .find(|u| u.id == user_id)
-            .cloned()
+        .cloned()
             .ok_or_else(|| "Invalid UUID".to_string())
 
     }
